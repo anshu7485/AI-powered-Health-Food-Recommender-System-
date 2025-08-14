@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Profile</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="form-container enhanced">
+        <h2 class="form-title">Health Profile</h2>
+        <form method="POST">
+            <div class="input-group">
+                <label>Medical Conditions:</label>
+                <input type="text" name="medical_conditions" value="{{ user.medical_conditions or '' }}">
+            </div>
+            <div class="input-group">
+                <label>Allergies:</label>
+                <input type="text" name="allergies" value="{{ user.allergies or '' }}">
+            </div>
+            <div class="input-group">
+                <label>Daily Calorie Goal:</label>
+                <input type="number" name="daily_calorie_goal" value="{{ user.daily_calorie_goal or '' }}">
+            </div>
+            <div class="input-group">
+                <label>Sugar Limit:</label>
+                <input type="number" name="sugar_limit" value="{{ user.sugar_limit or '' }}">
+            </div>
+            <div class="input-group">
+                <label>Sodium Limit:</label>
+                <input type="number" name="sodium_limit" value="{{ user.sodium_limit or '' }}">
+            </div>
+            <button type="submit" class="btn-primary">Save</button>
+        </form>
+    </div>
+</body>
+</html>
